@@ -4,19 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".DairyEntry">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/writeEntry"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:gravity="center"
+        android:text="yo"
+        android:textSize="25sp" />
+
     <Button
-        android:id="@+id/write"
-        android:layout_width="wrap_content"
+        android:id="@+id/makeEntry"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="write"/>
+        android:text="Make an entry"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
