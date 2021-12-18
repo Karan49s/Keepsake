@@ -10,9 +10,14 @@
         android:id="@+id/writeEntry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="30dp"
         android:gravity="center"
-        android:text="yo"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/makeEntry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
 
     <Button
         android:id="@+id/makeEntry"

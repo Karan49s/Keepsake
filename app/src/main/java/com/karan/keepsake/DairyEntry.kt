@@ -26,11 +26,13 @@ class DairyEntry : AppCompatActivity() {
         btn.setOnClickListener {
             try {
                 val fileOutputStream: FileOutputStream = openFileOutput("mytextfile.txt", Context.MODE_PRIVATE)
-                val outputWriter = OutputStreamWriter(fileOutputStream)
-                outputWriter.write(txt.text.toString())
-                outputWriter.close()
+                val Writer = OutputStreamWriter(fileOutputStream)
+                Writer.write(txt.text.toString())
+                Writer.close()
                 //display file saved message
-                Toast.makeText(baseContext, "File saved successfully!", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(baseContext, "File saved successfully!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Saved to " + getFilesDir() + "/" + "mytextfile.txt",
+                    Toast.LENGTH_LONG).show();
             }
             catch (e: Exception) {
                 e.printStackTrace()
