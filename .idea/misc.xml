@@ -6,6 +6,9 @@
         <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/activity_dairy_entry.xml" value="0.25" />
         <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/activity_lock_screen.xml" value="0.25" />
         <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/fragment_read_dairy.xml" value="0.25" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/fragment_write_dairy.xml" value="0.25" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/menu/bottom_nav.xml" value="0.25" />
       </map>
     </option>
   </component>
