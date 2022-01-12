@@ -3,21 +3,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WriteDairyFragment">
+    tools:context=".WriteDairyFragment"
+    android:background="@drawable/ruled_lines">
 
-    <EditText
-        android:id="@+id/writeEntry"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:padding="2dp"/>
+        android:text="Write your dairy entry"
+        android:padding="8dp"
+        android:layout_marginLeft="16dp"/>
+
+        <EditText
+            android:id="@+id/writeEntry"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/edit_text"
+            android:padding="2dp"
+            android:textSize="25sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="120dp"/>
+
+    <EditText
+        android:id="@+id/keytext"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_text"
+        android:padding="8dp"
+        android:textSize="20sp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="70dp"
+        android:hint="Enter Key to Encrypt"/>
+
     <Button
         android:id="@+id/makeEntry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Make an Entry"
+        android:textColor="@color/white"
         android:layout_gravity="bottom"
         android:padding="8dp"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/black"/>
 
 </FrameLayout>

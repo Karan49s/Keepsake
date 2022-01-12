@@ -3,10 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/drawable/button_bg.xml" value="0.26614583333333336" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/drawable/edit_text.xml" value="0.26614583333333336" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/drawable/home.xml" value="0.26614583333333336" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.26614583333333336" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/drawable/ruled_lines.xml" value="0.264" />
         <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/activity_dairy_entry.xml" value="0.25" />
-        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/activity_lock_screen.xml" value="0.25" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/activity_lock_screen.xml" value="0.2" />
         <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/fragment_read_dairy.xml" value="0.25" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/fragment_home.xml" value="0.23777173913043478" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/fragment_login.xml" value="0.23777173913043478" />
+        <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/fragment_read_dairy.xml" value="0.2" />
         <entry key="..\:/Android Dev/Keepsake/app/src/main/res/layout/fragment_write_dairy.xml" value="0.25" />
         <entry key="..\:/Android Dev/Keepsake/app/src/main/res/menu/bottom_nav.xml" value="0.25" />
       </map>

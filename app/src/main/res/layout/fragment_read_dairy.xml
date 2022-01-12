@@ -4,16 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReadDairyFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <EditText
+        android:id="@+id/key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text"
+        android:textSize="30sp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:hint=" Enter Key"
+        />
+    <Button
+        android:id="@+id/decrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        android:textColor="@color/white"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/black"
+        />
+</LinearLayout>
 
-    <ScrollView
-        android:id="@+id/scrollview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <TextView
             android:id="@+id/showdata"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </ScrollView>
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text"
+            android:textSize="25sp"
+            android:layout_marginTop="50dp"
+            />
+
 
 
 </FrameLayout>

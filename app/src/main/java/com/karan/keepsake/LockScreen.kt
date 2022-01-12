@@ -26,9 +26,10 @@ enum class states {
 var pageState = states.LOGIN
 
 
+
 class LockScreen : AppCompatActivity() {
     lateinit var pass_view : EditText
-    lateinit var submit : ImageButton
+    lateinit var submit : Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +43,7 @@ class LockScreen : AppCompatActivity() {
         val first = sharedPref.getBoolean("isFirst",true);
         if(first){
             pageState = states.SET_PASSWORD
+
             StateChangeListner()
             sharedPref.edit().putBoolean("isFirst",false).commit()
         }
@@ -54,43 +56,48 @@ class LockScreen : AppCompatActivity() {
     fun StateChangeListner(){
         when(pageState){
             states.SET_PASSWORD->{
-
+                submit.text = "SET PASSWORD"
             }
             states.LOGIN->{
-
+                submit.text = "Login"
             }
             states.CONFIRM_PASSWORD->{
-
+                submit.text = "CONFIRM PASSWORD"
             }
         }
     }
 
     fun key_press(view: android.view.View) {
         pass = pass_view.text.toString()
-                when(pageState){
-                    states.CONFIRM_PASSWORD->{
-                        if(confirm_pass == pass){
-                            sharedPref.edit().putString("password", confirm_pass).commit();
-                            login()
-                        }else{
-                            Toast.makeText(this, "Password Does not match!!", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                    states.LOGIN->{
-                        if (sharedPref.getString("password","").toString()==pass) {
-                            login()
-                        }else{
-                            Toast.makeText(this, "Wrong Password", Toast.LENGTH_SHORT).show()
-                        }
-                    }
-                    states.SET_PASSWORD->{
-                        confirm_pass= pass
-                        pass=""
-                        pass_view.setText("")
-                        pageState = states.CONFIRM_PASSWORD
-                        StateChangeListner()
+        if (pass.trim().length >3){
+            when(pageState){
+                states.CONFIRM_PASSWORD->{
+                    if(confirm_pass == pass){
+                        sharedPref.edit().putString("password", confirm_pass).commit();
+                        login()
+                    }else{
+                        Toast.makeText(this, "Password Does not match!!", Toast.LENGTH_SHORT).show()
                     }
                 }
+                states.LOGIN->{
+                    if (sharedPref.getString("password","").toString()==pass) {
+                        login()
+                    }else{
+                        Toast.makeText(this, "Wrong Password", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                states.SET_PASSWORD->{
+                    confirm_pass= pass
+                    pass=""
+                    pass_view.setText("")
+                    pageState = states.CONFIRM_PASSWORD
+                    StateChangeListner()
+                }
+            }
+        }else{
+            Toast.makeText(this, "Password should be minimum 4 character long", Toast.LENGTH_SHORT).show()
+        }
+                
 
     }
 
